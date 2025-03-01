@@ -19,15 +19,13 @@ body {
     background-position: center;
 }
 
-
 body.light-theme {
-    background-image: url('/icons/light.png');  
+    background-image: url('/icons/light.png');  /* Caminho para a imagem clara */
     color: var(--light-text);
 }
 
-
 body.dark-theme {
-    background-image: url('/icons/dark.png');  
+    background-image: url('/icons/dark.png');  /* Caminho para a imagem escura */
     color: var(--dark-text);
 }
 
@@ -106,7 +104,6 @@ ul li:hover {
     box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
 }
 
-
 #theme-toggle {
     width: 60px;
     height: 60px;
@@ -172,20 +169,12 @@ ul li:hover {
     }
 
     ul li {
-        width: 100%;
         height: 50px;
-        font-size: 14px;
-    }
-
-    #title {
-        font-size: 24px;
-        margin-bottom: 20px;
+        width: 120px;
     }
 
     #theme-toggle {
         width: 50px;
         height: 50px;
-        bottom: 15px;
-        right: 15px;
     }
 }
