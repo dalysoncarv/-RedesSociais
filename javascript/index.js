@@ -3,24 +3,37 @@ const body = document.body;
 const sunIcon = document.getElementById("sun-icon");
 const moonIcon = document.getElementById("moon-icon");
 
+
+function applySavedTheme() {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+        body.classList.remove("light-theme");
+        moonIcon.style.display = "inline";
+        sunIcon.style.display = "none";
+    } else {
+        body.classList.add("light-theme");
+        body.classList.remove("dark-theme");
+        moonIcon.style.display = "none";
+        sunIcon.style.display = "inline";
+    }
+}
+
+
 themeToggleButton.addEventListener("click", () => {
     body.classList.toggle("dark-theme");
+    body.classList.toggle("light-theme");
 
-    const isDarkTheme = body.classList.contains("dark-theme");
-    
-    sunIcon.style.display = isDarkTheme ? "none" : "inline";
-    moonIcon.style.display = isDarkTheme ? "inline" : "none";
-    
-    localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
+    const isDarkMode = body.classList.contains("dark-theme");
+
+   
+    moonIcon.style.display = isDarkMode ? "inline" : "none";
+    sunIcon.style.display = isDarkMode ? "none" : "inline";
+
+   
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 });
 
 
-if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-theme");
-    sunIcon.style.display = "none";
-    moonIcon.style.display = "inline";
-} else {
-    body.classList.add("light-theme");
-    sunIcon.style.display = "inline";
-    moonIcon.style.display = "none";
-}
+applySavedTheme();

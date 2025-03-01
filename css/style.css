@@ -1,6 +1,4 @@
 :root {
-    --light-background: url('/icons/light.png');  
-    --dark-background: url('/icons/Dark.png');    
     --light-text: #ff8f00;
     --dark-text: #ffffff;
     --button-background: #ff8f00;
@@ -17,19 +15,20 @@ body {
     height: 100vh;
     margin: 0;
     text-align: center;
-    background-size: cover; 
+    background-size: cover;
+    background-position: center;
 }
+
 
 body.light-theme {
-    background-image: var(--light-background);  
+    background-image: url('/icons/light.png');  
     color: var(--light-text);
-    transition: background-image 1s ease-in-out, color 1s ease-in-out;
 }
 
+
 body.dark-theme {
-    background-image: var(--dark-background);  
+    background-image: url('/icons/Dark.png');  
     color: var(--dark-text);
-    transition: background-image 1s ease-in-out, color 1s ease-in-out;
 }
 
 #app {
@@ -107,6 +106,7 @@ ul li:hover {
     box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
 }
 
+
 #theme-toggle {
     width: 60px;
     height: 60px;
@@ -144,7 +144,6 @@ ul li:hover {
         width: 30%;
     }
 }
-
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
     ul {
