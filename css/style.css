@@ -24,7 +24,7 @@ body.light-theme {
 }
 
 body.dark-theme {
-    background-image: url('/dark.png');  
+    background-image: url('/icons/dark.png');  
 }
 
 #app {
