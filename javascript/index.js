@@ -9,13 +9,13 @@ function applySavedTheme() {
     if (savedTheme === "dark") {
         body.classList.add("dark-theme");
         body.classList.remove("light-theme");
-        moonIcon.style.display = "inline";  
-        sunIcon.style.display = "none";  
+        moonIcon.classList.add("active");  
+        sunIcon.classList.remove("active");  
     } else {
         body.classList.add("light-theme");
         body.classList.remove("dark-theme");
-        moonIcon.style.display = "none";   
-        sunIcon.style.display = "inline";  
+        moonIcon.classList.remove("active");   
+        sunIcon.classList.add("active");  
     }
     console.log('Tema aplicado:', savedTheme);
 }
@@ -26,13 +26,11 @@ themeToggleButton.addEventListener("click", () => {
 
     const isDarkMode = body.classList.contains("dark-theme");
 
-    moonIcon.style.display = isDarkMode ? "inline" : "none";
-    sunIcon.style.display = isDarkMode ? "none" : "inline";
+    moonIcon.classList.toggle("active", isDarkMode);
+    sunIcon.classList.toggle("active", !isDarkMode);
 
-    
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     console.log('Tema alterado para:', isDarkMode ? "dark" : "light");
 });
-
 
 applySavedTheme();
