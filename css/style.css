@@ -27,7 +27,7 @@ body.light-theme {
 
 
 body.dark-theme {
-    background-image: url('/icons/Dark.png');  
+    background-image: url('/icons/dark.png');  
     color: var(--dark-text);
 }
 
