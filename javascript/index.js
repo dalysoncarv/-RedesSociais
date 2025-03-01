@@ -29,7 +29,7 @@ themeToggleButton.addEventListener("click", () => {
     moonIcon.style.display = isDarkMode ? "inline" : "none";
     sunIcon.style.display = isDarkMode ? "none" : "inline";
 
-    // Salva a preferência do tema no localStorage
+    
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     console.log('Tema alterado para:', isDarkMode ? "dark" : "light");
 });

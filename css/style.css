@@ -20,7 +20,7 @@ body {
 }
 
 body.light-theme {
-    background-image: url('//light.png'); 
+    background-image: url('/icons/light.png'); 
 }
 
 body.dark-theme {
