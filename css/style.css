@@ -8,21 +8,6 @@
     --button-active-background: #ff6f00;
 }
 
-
-body.light-theme {
-    background-image: var(--light-background);
-    background-size: cover;
-    color: var(--light-text);
-    transition: background-image 1s ease-in-out, color 1s ease-in-out; 
-}
-
-body.dark-theme {
-    background-image: var(--dark-background);
-    background-size: cover;
-    color: var(--dark-text);
-    transition: background-image 1s ease-in-out, color 1s ease-in-out; 
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease-in-out;
@@ -32,8 +17,20 @@ body {
     height: 100vh;
     margin: 0;
     text-align: center;
+    background-size: cover; 
 }
 
+body.light-theme {
+    background-image: var(--light-background);  
+    color: var(--light-text);
+    transition: background-image 1s ease-in-out, color 1s ease-in-out;
+}
+
+body.dark-theme {
+    background-image: var(--dark-background);  
+    color: var(--dark-text);
+    transition: background-image 1s ease-in-out, color 1s ease-in-out;
+}
 
 #app {
     display: flex;
@@ -43,7 +40,6 @@ body {
     gap: 20px;
     width: 100%;
 }
-
 
 #title {
     background-image: linear-gradient(98deg, var(--light-text), #ffffff);
@@ -81,16 +77,15 @@ ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
 }
 
-
 body.light-theme ul li {
-    border-color: #ff8f00; 
+    border-color: #ff8f00;
 }
 
 body.dark-theme ul li {
-    border-color: #1783ca; 
+    border-color: #1783ca;
 }
 
 ul li a {
@@ -150,19 +145,18 @@ ul li:hover {
     }
 }
 
-/* Responsividade para telas médias (Tablets) */
+
 @media screen and (min-width: 767px) and (max-width: 1024px) {
     ul {
         width: 50%;
     }
 }
 
-
 @media screen and (max-width: 767px) {
     body {
         flex-direction: column;
     }
-    
+
     #app {
         width: 100%;
         padding: 20px;
