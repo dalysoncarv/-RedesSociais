@@ -20,13 +20,11 @@ body {
 }
 
 body.light-theme {
-    background-image: url('/icons/light.png');  /* Caminho para a imagem clara */
-    color: var(--light-text);
+    background-image: url('/icons/light.png'); 
 }
 
 body.dark-theme {
-    background-image: url('/icons/dark.png');  /* Caminho para a imagem escura */
-    color: var(--dark-text);
+    background-image: url('/icons/dark.png');  
 }
 
 #app {

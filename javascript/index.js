@@ -17,7 +17,7 @@ function applySavedTheme() {
         moonIcon.style.display = "none";   
         sunIcon.style.display = "inline";  
     }
-    console.log('Tema aplicado:', savedTheme); // Verifica qual tema está sendo carregado
+    console.log('Tema aplicado:', savedTheme);
 }
 
 themeToggleButton.addEventListener("click", () => {
@@ -29,8 +29,10 @@ themeToggleButton.addEventListener("click", () => {
     moonIcon.style.display = isDarkMode ? "inline" : "none";
     sunIcon.style.display = isDarkMode ? "none" : "inline";
 
+    // Salva a preferência do tema no localStorage
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-    console.log('Tema alterado para:', isDarkMode ? "dark" : "light"); // Verifica qual tema está sendo alterado
+    console.log('Tema alterado para:', isDarkMode ? "dark" : "light");
 });
+
 
 applySavedTheme();
